@@ -1,0 +1,37 @@
+{{define "base"}}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link href="style.css" rel="stylesheet">
+    <title>URL Shortener</title>
+</head>
+<body>
+
+<header class="text-center">
+    <div class="container">
+        <div class="row">
+            <h1 class="mb-5">Get a shortened url:</h1>
+        </div>
+        <form action="/" method="post">
+            <div class="row">
+                <div class="col-xs-10">
+                    <input type="text" name="longurl" class="form-control form-control-lg" placeholder="Enter the url...">
+                </div>
+                <div class="col-xs-2">
+                    <button type="submit" class="btn btn-md btn-primary">Submit</button>
+                </div>
+            </div>
+        </form>
+        <div> {{template  "content" .}} </div>
+    </div>
+
+</header>
+</body>
+
+</html>
+{{end}}
